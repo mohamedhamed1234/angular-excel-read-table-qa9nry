@@ -1,0 +1,12 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+	<table class="sjs-table">
+		<tbody>
+      <tr *ngFor="let row of data">
+			<td *ngFor="let val0 of row">
+				{{val0}}
+			</td>
+		</tr>
+    <div>{{data | json}}</div>
+    </tbody>
+	</table>
+	<button (click)="export()">Export!</button>
